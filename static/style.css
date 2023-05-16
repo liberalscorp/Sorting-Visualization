@@ -1,0 +1,83 @@
+
+header 
+{
+	color: #3CC47C;
+	background-color: #0E0B16;
+	text-align: center;
+}
+body
+{
+	color: #66AB8C;
+	background-color: #0E0B16;
+	font-size: 15px;
+}
+
+.center {
+	text-align: center;
+	margin:0 auto;
+}
+.input_wrapper{
+  background-color: rgb(191, 207, 235);
+  height: 150px;
+  font-size: x-large;
+  color: rgb(2, 0, 0);
+  border: 5px ridge rgb(108, 75, 209);
+}
+
+.monospace {
+	font-family: "Courier New", Courier, monospace;
+}
+
+div {
+	padding: 10px;
+}
+.range_boxes {
+	width: 100%;
+  	padding: 12px 20px;
+  	margin: 8px 0;
+  	box-sizing: border-box;
+  	border: none;
+  	text-align: center;
+  	
+	
+}
+
+
+button {
+	background-color: #675682;
+	color: white;
+	border: none;
+	padding: 10px;
+	align-self: center;
+	text-align: center;
+	font-size: 15px;
+	border-radius: 10px;
+	
+}
+
+button:hover {
+	background-color: gray;
+	color: black;
+}
+
+
+.loader {
+	border: 8px solid black;
+	border-top: 8px solid white;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	animation: spin 1.25s linear infinite;
+	text-align: center;
+	margin:0 auto;
+}
+.dropdown {
+ 	position: relative;
+ 	display: inline-block;
+   	background-color: white;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

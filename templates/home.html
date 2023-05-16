@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>algo_project</title>
+		<script src = "{{ url_for('static', filename='sort.js') }}" type="text/javascript"></script>
+		<script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+		
+	</head>
+	<br>
+	<br>
+	<header class="monospace" style="font-size:250%; text-align: center">
+		SORT WIZARD
+	</header>
+	<body>
+		<br><br><br>
+		<div id="input_wrapper" class="center" >
+			<select id="algorithm" class=monospace title="desired algorithm" style="background-color: #6c648B;border-color:#7CDBD5;text-align:center;">
+				<option value=0>Bubble Sort</option>
+				<option value=1>Selection Sort</option>
+				<option value=2>Insertion Sort</option>
+				<option value=3>Merge Sort</option>
+				<option value=4>Quick Sort (rand)</option>
+				<option value=5>Quick Sort (mo3)</option>
+				<option value=6>Heap Sort</option>
+				<option value=7>Count Sort </option>
+				<option value=8>Radix Sort</option>
+				<option value=9>Bucket Sort</option>
+				<option value=10>Hybrid Sort</option>
+				
+				
+				
+				
+			</select>
+			&nbsp;
+			<input type="text" class=monospace placeholder="array seperated by commas" title="array to sort" id="array" style="width:500px; background-color: #6c648B; border-color:#7CDBD5;text-align:center;">
+			&nbsp; 
+			<input type="number" class=monospace title = "(ms) time gap between basic operations" id="time interval" value="80" style="width:80px;background-color: #6c648B;text-align:center;border-color:#7CDBD5;">
+		</div>
+		<div id="range_boxes" class="center">
+			Lower Boundary : <input type="text" id = "low" class="no-outline" style="width:30px; text-align:center;background-color: #6c648B;border-color:#7CDBD5;">
+			&nbsp; &nbsp;
+			Upper Boundary : <input type="text" id = "high" class="no-outline" style="width:30px; text-align:center;background-color: #6c648B;border-color:#7CDBD5;">
+			&nbsp; &nbsp;
+			Element Count : <input type="text" id = "counter" class="no-outline" style="width:30px; text-align:center;background-color: #6c648B;border-color:#7CDBD5;">
+			&nbsp; &nbsp;
+			
+		</div>
+		<div class="center">
+			Space Complexity : <input type="text" id = "space_complexity" style="width:50px; text-align:center;background-color: #6c648B;border-color:#7CDBD5;" class="no-outline" > &nbsp; &nbsp;
+			Time Complexity : <input type="text" id = "time_complexity" style="width:80px; text-align:center;background-color: #6c648B;border-color:#7CDBD5;" class="no-outline" >
+		</div>
+		<div id="button wrapper" class="center">
+			<button class=monospace onclick = "sortIt();" style="color:black">Sort</button> &nbsp;
+			<button class=monospace onclick = "generateArray(10, 100);"style="color:black">Generate</button> &nbsp;
+			<button class=monospace onclick= "range_calc();"style="color:black">Find</button>
+		</div>
+		<br>
+		<br>
+		<div id="canvas wrapper" class="center" style="width:60%; height:30%;"></div>
+		<div id="loader_time wrapper" class="center"></div>
+  		<div>
+  			 Choose File :
+   			 <br>
+  			 <input id="load"  type="file" value = "load" onchange="load_func()" ></input>
+  			 
+  		</div>
+  		
+		
+		
+  		
+	</body>
+</html>
